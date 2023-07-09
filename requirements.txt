@@ -1,0 +1,3 @@
+decouple==0.0.7
+pyodbc==4.0.30
+wcwidth==0.2.6
