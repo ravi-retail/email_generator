@@ -1,0 +1,567 @@
+2023-07-09 14:42:57.199681:----------------------------------------------------:
+Testing following emails ['roa'] 
+Connected to the database successfully!
+Testing: roa
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for ROA
+Connected to the database successfully!
+Disconnected from the database.
+Created all records for ROA
+Connected to the database successfully!
+Disconnected from the database.
+Updated all records for ROA
+Error While testing : Traceback (most recent call last):
+  File "C:\Work\testing\email_tester\env\lib\site-packages\urllib3\connection.py", line 200, in _new_conn
+    sock = connection.create_connection(
+  File "C:\Work\testing\email_tester\env\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Work\testing\email_tester\env\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Work\testing\email_tester\env\lib\site-packages\urllib3\connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+  File "C:\Work\testing\email_tester\env\lib\site-packages\urllib3\connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "C:\Work\testing\email_tester\env\lib\site-packages\urllib3\connection.py", line 388, in request
+    self.endheaders()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1247, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1007, in _send_output
+    self.send(msg)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 947, in send
+    self.connect()
+  File "C:\Work\testing\email_tester\env\lib\site-packages\urllib3\connection.py", line 236, in connect
+    self.sock = self._new_conn()
+  File "C:\Work\testing\email_tester\env\lib\site-packages\urllib3\connection.py", line 215, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001C904E8DB20>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Work\testing\email_tester\env\lib\site-packages\requests\adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "C:\Work\testing\email_tester\env\lib\site-packages\urllib3\connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+  File "C:\Work\testing\email_tester\env\lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /api/v1/roamail (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C904E8DB20>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Work\testing\email_tester\test_code\main_test.py", line 62, in main
+    test_func(URL, HEADERS, db)
+  File "C:\Work\testing\email_tester\test_code\roa_tester.py", line 17, in send_roa_email
+    response = call_django_api(url, headers)
+  File "C:\Work\testing\email_tester\test_code\roa_tester.py", line 39, in call_django_api
+    return requests.post(url + URL, headers=headers, data=BODY)
+  File "C:\Work\testing\email_tester\env\lib\site-packages\requests\api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "C:\Work\testing\email_tester\env\lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Work\testing\email_tester\env\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Work\testing\email_tester\env\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Work\testing\email_tester\env\lib\site-packages\requests\adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /api/v1/roamail (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C904E8DB20>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for style='eapple'
+2023-07-09 14:43:34.848402:----------------------------------------------------:
+Testing following emails ['roa'] 
+Connected to the database successfully!
+Testing: roa
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for ROA
+Connected to the database successfully!
+Disconnected from the database.
+Created all records for ROA
+Connected to the database successfully!
+Disconnected from the database.
+Updated all records for ROA
+ROA Email not sent, tried to delete and save data {'detail': 'Method "POST" not allowed.'} 
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for style='eapple'
+2023-07-09 14:44:05.049521:----------------------------------------------------:
+Testing following emails ['roa'] 
+Connected to the database successfully!
+Testing: roa
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for ROA
+Connected to the database successfully!
+Disconnected from the database.
+Created all records for ROA
+Connected to the database successfully!
+Disconnected from the database.
+Updated all records for ROA
+ROA Email sent successfully
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for style='eapple'
+2023-07-09 14:44:50.258803:----------------------------------------------------:
+Testing following emails ['roa'] 
+Connected to the database successfully!
+Testing: roa
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for ROA
+Connected to the database successfully!
+Disconnected from the database.
+Created all records for ROA
+Connected to the database successfully!
+Disconnected from the database.
+Updated all records for ROA
+ROA Email sent successfully
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for style='eapple'
+2023-07-09 14:45:53.609480:----------------------------------------------------:
+Testing following emails ['roa'] 
+Connected to the database successfully!
+Testing: roa
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for ROA
+Connected to the database successfully!
+Disconnected from the database.
+Created all records for ROA
+Connected to the database successfully!
+Disconnected from the database.
+Updated all records for ROA
+ROA Email sent successfully, {'success': 'Mail is sent successfully'}
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for style='eapple'
+2023-07-09 14:47:52.260842:----------------------------------------------------:
+Testing following emails ['roa'] 
+Connected to the database successfully!
+Testing: roa
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for ROA
+Connected to the database successfully!
+Disconnected from the database.
+Created all records for ROA
+Connected to the database successfully!
+Disconnected from the database.
+Updated all records for ROA
+ROA Email sent successfully, {'success': 'Mail is sent successfully'}
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for style='eapple'
+2023-07-09 16:23:28.384349:----------------------------------------------------:
+Testing following emails ['roa'] 
+Connected to the database successfully!
+Testing: roa
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for ROA
+Connected to the database successfully!
+Disconnected from the database.
+Created all records for ROA
+ROA Email sent successfully, {'success': 'Mail is sent successfully'}
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for style='eapple'
+2023-07-09 16:24:52.537770:----------------------------------------------------:
+Testing following emails ['roa'] 
+Connected to the database successfully!
+Testing: roa
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for ROA
+Connected to the database successfully!
+Disconnected from the database.
+Created all records for ROA
+ROA Email sent successfully, {'success': 'Mail is sent successfully'}
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for style='eapple'
+2023-07-09 16:28:26.195505:----------------------------------------------------:
+Testing following emails ['droa'] 
+Connected to the database successfully!
+Testing: droa
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for DROA
+Connected to the database successfully!
+Disconnected from the database.
+Created all records for DROA
+DROA Email not sent, tried to delete and save data {'success': 'Mail is sent successfully'} 
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for style='eapple'
+2023-07-09 16:29:07.367728:----------------------------------------------------:
+Testing following emails ['droa'] 
+Connected to the database successfully!
+Testing: droa
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for DROA
+Connected to the database successfully!
+Disconnected from the database.
+Created all records for DROA
+DROA Email sent successfully, {'success': 'Droa Mail sent successfully'}
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for style='eapple'
+2023-07-09 16:37:00.490010:----------------------------------------------------:
+Testing following emails ['roa'] 
+Connected to the database successfully!
+Testing: roa
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for ROA
+Connected to the database successfully!
+Disconnected from the database.
+Created all records for ROA
+ROA Email sent successfully, {'success': 'Mail is sent successfully'}
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for style='eapple'
+2023-07-09 17:07:21.868946:----------------------------------------------------:
+Testing following emails ['droa'] 
+Connected to the database successfully!
+Testing: droa
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for DROA
+Connected to the database successfully!
+Disconnected from the database.
+Created all records for DROA
+DROA Email sent successfully, {'success': 'Droa Mail sent successfully'}
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for style='eapple'
+2023-07-09 17:12:25.922480:----------------------------------------------------:
+Testing following emails ['roa'] 
+Connected to the database successfully!
+Testing: roa
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for ROA
+Connected to the database successfully!
+Disconnected from the database.
+Created all records for ROA
+ROA Email sent successfully, {'success': 'Mail is sent successfully'}
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for style='eapple'
+2023-07-09 17:16:32.650684:----------------------------------------------------:
+Testing following emails ['droa'] 
+Connected to the database successfully!
+Testing: droa
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for DROA
+Connected to the database successfully!
+Disconnected from the database.
+Created all records for DROA
+DROA Email sent successfully, {'success': 'Droa Mail sent successfully'}
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for style='eapple'
+2023-07-09 17:16:39.048593:----------------------------------------------------:
+Testing following emails ['roa'] 
+Connected to the database successfully!
+Testing: roa
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for ROA
+Connected to the database successfully!
+Disconnected from the database.
+Created all records for ROA
+ROA Email sent successfully, {'success': 'Mail is sent successfully'}
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for style='eapple'
+2023-07-09 17:32:14.304355:----------------------------------------------------:
+Testing following emails ['dsrt'] 
+Connected to the database successfully!
+Testing: dsrt
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for DSRT
+Connected to the database successfully!
+Disconnected from the database.
+Created all records for DSRT
+DSRT Email not sent, tried to delete and save data {'error': 'Daily Status Report is not done'} 
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for style='eapple'
+2023-07-09 17:34:03.889811:----------------------------------------------------:
+Testing following emails ['dsrt'] 
+Connected to the database successfully!
+Testing: dsrt
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for DSRT
+Connected to the database successfully!
+Disconnected from the database.
+Created all records for DSRT
+DSRT Email not sent, tried to delete and save data {'error': 'Daily Status Report is not done'} 
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for style='eapple'
+2023-07-09 17:35:05.779683:----------------------------------------------------:
+Testing following emails ['dsrt'] 
+Connected to the database successfully!
+Testing: dsrt
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for DSRT
+Connected to the database successfully!
+Disconnected from the database.
+Created all records for DSRT
+DSRT Email not sent, tried to delete and save data {'error': 'Daily Status Report is not done'} 
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for style='eapple'
+2023-07-09 17:35:46.378919:----------------------------------------------------:
+Testing following emails ['dsrt'] 
+Connected to the database successfully!
+Testing: dsrt
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for DSRT
+Connected to the database successfully!
+Disconnected from the database.
+Created all records for DSRT
+DSRT Email not sent, tried to delete and save data {'error': 'Daily Status Report is not done'} 
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for style='eapple'
+2023-07-09 17:36:38.362123:----------------------------------------------------:
+Testing following emails ['dsrt'] 
+Connected to the database successfully!
+Testing: dsrt
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for DSRT
+Connected to the database successfully!
+Disconnected from the database.
+Created all records for DSRT
+DSRT Email not sent, tried to delete and save data {'error': 'Daily Status Report is not done'} 
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for style='eapple'
+2023-07-09 17:58:36.204140:----------------------------------------------------:
+Testing following emails ['dsrt'] 
+Connected to the database successfully!
+Testing: dsrt
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for DSRT
+Connected to the database successfully!
+Disconnected from the database.
+Created all records for DSRT
+DSRT Email not sent, tried to delete and save data {'error': 'Daily Status Report is not done'} 
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for style='eapple'
+2023-07-09 17:59:52.521286:----------------------------------------------------:
+Testing following emails ['dsrt'] 
+Connected to the database successfully!
+Testing: dsrt
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for DSRT
+Connected to the database successfully!
+Disconnected from the database.
+Created all records for DSRT
+Error While testing : Traceback (most recent call last):
+  File "C:\Work\testing\email_tester\env\lib\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Work\testing\email_tester\test_code\main_test.py", line 68, in main
+    test_func(URL, HEADERS, db)
+  File "C:\Work\testing\email_tester\test_code\dsrt_tester.py", line 19, in send_dsrt_email
+    if response.status_code == 200 and response.json() == SUCCESS_RESPONSE:
+  File "C:\Work\testing\email_tester\env\lib\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for style='eapple'
+2023-07-09 18:07:41.749632:----------------------------------------------------:
+Testing following emails ['dsre'] 
+Connected to the database successfully!
+Test Function name not defined
+Testing: dsre
+Error While testing : Traceback (most recent call last):
+  File "C:\Work\testing\email_tester\test_code\main_test.py", line 68, in main
+    test_func(URL, HEADERS, db)
+TypeError: empty_function() takes 0 positional arguments but 3 were given
+
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for style='eapple'
+2023-07-09 18:11:31.231015:----------------------------------------------------:
+Testing following emails ['dsre'] 
+Connected to the database successfully!
+Testing: dsre
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for DSRE
+Connected to the database successfully!
+Disconnected from the database.
+Created all records for DSRE
+DSRE Email sent successfully, {'status': 'success'}
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for style='eapple'
+2023-07-09 18:49:04.641652:----------------------------------------------------:
+Testing following emails ['lpie'] 
+Connected to the database successfully!
+Test Function name not defined
+Testing: lpie
+Error While testing : Traceback (most recent call last):
+  File "C:\Work\testing\email_tester\test_code\main_test.py", line 77, in main
+    test_status = test_func(URL, HEADERS, db)
+TypeError: empty_function() takes 0 positional arguments but 3 were given
+
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for style='eapple'
+2023-07-09 18:50:43.857126:----------------------------------------------------:
+Testing following emails ['lpie'] 
+Connected to the database successfully!
+Testing: lpie
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for LPIE
+LPIE Email not sent, tried to delete and save data {'status': "Style Initiation Successful for [{'Dickies': [[('I651035', 'L', '029', 'DICKI'), ('I315054', 'L', '100', 'DICKI'), ('I315054', 'L', '100', 'DICKI'), ('I315052', 'L', '100', 'DICKI'), ('I315052', 'L', '100', 'DICKI'), ('I611036', 'L', '044', 'DICKW'), ('I611036', 'L', '905', 'DICKW'), ('I62001', 'G', '001', 'DICKI'), ('I511037', 'M', '031', 'DICKW'), ('K225017', 'L', '448', 'DICKG'), ('K225017', 'L', '448', 'DICKG')], [('I651035', 'L', '029', 'DICKI'), ('I315054', 'L', '100', 'DICKI'), ('I315054', 'L', '100', 'DICKI'), ('I315052', 'L', '100', 'DICKI'), ('I315052', 'L', '100', 'DICKI'), ('I611036', 'L', '044', 'DICKW'), ('I611036', 'L', '905', 'DICKW'), ('I62001', 'G', '001', 'DICKI'), ('I511037', 'M', '031', 'DICKW'), ('K225017', 'L', '448', 'DICKG'), ('K225017', 'L', '448', 'DICKG')], [('I651035', 'L', '029', 'DICKI'), ('I315054', 'L', '100', 'DICKI'), ('I315054', 'L', '100', 'DICKI'), ('I315052', 'L', '100', 'DICKI'), ('I315052', 'L', '100', 'DICKI'), ('I611036', 'L', '044', 'DICKW'), ('I611036', 'L', '905', 'DICKW'), ('I62001', 'G', '001', 'DICKI'), ('I511037', 'M', '031', 'DICKW'), ('K225017', 'L', '448', 'DICKG'), ('K225017', 'L', '448', 'DICKG')], [('I651035', 'L', '029', 'DICKI'), ('I315054', 'L', '100', 'DICKI'), ('I315054', 'L', '100', 'DICKI'), ('I315052', 'L', '100', 'DICKI'), ('I315052', 'L', '100', 'DICKI'), ('I611036', 'L', '044', 'DICKW'), ('I611036', 'L', '905', 'DICKW'), ('I62001', 'G', '001', 'DICKI'), ('I511037', 'M', '031', 'DICKW'), ('K225017', 'L', '448', 'DICKG'), ('K225017', 'L', '448', 'DICKG')], [('I651035', 'L', '029', 'DICKI'), ('I315054', 'L', '100', 'DICKI'), ('I315054', 'L', '100', 'DICKI'), ('I315052', 'L', '100', 'DICKI'), ('I315052', 'L', '100', 'DICKI'), ('I611036', 'L', '044', 'DICKW'), ('I611036', 'L', '905', 'DICKW'), ('I62001', 'G', '001', 'DICKI'), ('I511037', 'M', '031', 'DICKW'), ('K225017', 'L', '448', 'DICKG'), ('K225017', 'L', '448', 'DICKG')], [('I651035', 'L', '029', 'DICKI'), ('I315054', 'L', '100', 'DICKI'), ('I315054', 'L', '100', 'DICKI'), ('I315052', 'L', '100', 'DICKI'), ('I315052', 'L', '100', 'DICKI'), ('I611036', 'L', '044', 'DICKW'), ('I611036', 'L', '905', 'DICKW'), ('I62001', 'G', '001', 'DICKI'), ('I511037', 'M', '031', 'DICKW'), ('K225017', 'L', '448', 'DICKG'), ('K225017', 'L', '448', 'DICKG')], [('I651035', 'L', '029', 'DICKI'), ('I315054', 'L', '100', 'DICKI'), ('I315054', 'L', '100', 'DICKI'), ('I315052', 'L', '100', 'DICKI'), ('I315052', 'L', '100', 'DICKI'), ('I611036', 'L', '044', 'DICKW'), ('I611036', 'L', '905', 'DICKW'), ('I62001', 'G', '001', 'DICKI'), ('I511037', 'M', '031', 'DICKW'), ('K225017', 'L', '448', 'DICKG'), ('K225017', 'L', '448', 'DICKG')], [('I651035', 'L', '029', 'DICKI'), ('I315054', 'L', '100', 'DICKI'), ('I315054', 'L', '100', 'DICKI'), ('I315052', 'L', '100', 'DICKI'), ('I315052', 'L', '100', 'DICKI'), ('I611036', 'L', '044', 'DICKW'), ('I611036', 'L', '905', 'DICKW'), ('I62001', 'G', '001', 'DICKI'), ('I511037', 'M', '031', 'DICKW'), ('K225017', 'L', '448', 'DICKG'), ('K225017', 'L', '448', 'DICKG')], [('I651035', 'L', '029', 'DICKI'), ('I315054', 'L', '100', 'DICKI'), ('I315054', 'L', '100', 'DICKI'), ('I315052', 'L', '100', 'DICKI'), ('I315052', 'L', '100', 'DICKI'), ('I611036', 'L', '044', 'DICKW'), ('I611036', 'L', '905', 'DICKW'), ('I62001', 'G', '001', 'DICKI'), ('I511037', 'M', '031', 'DICKW'), ('K225017', 'L', '448', 'DICKG'), ('K225017', 'L', '448', 'DICKG')], [('I651035', 'L', '029', 'DICKI'), ('I315054', 'L', '100', 'DICKI'), ('I315054', 'L', '100', 'DICKI'), ('I315052', 'L', '100', 'DICKI'), ('I315052', 'L', '100', 'DICKI'), ('I611036', 'L', '044', 'DICKW'), ('I611036', 'L', '905', 'DICKW'), ('I62001', 'G', '001', 'DICKI'), ('I511037', 'M', '031', 'DICKW'), ('K225017', 'L', '448', 'DICKG'), ('K225017', 'L', '448', 'DICKG')], [('I651035', 'L', '029', 'DICKI'), ('I315054', 'L', '100', 'DICKI'), ('I315054', 'L', '100', 'DICKI'), ('I315052', 'L', '100', 'DICKI'), ('I315052', 'L', '100', 'DICKI'), ('I611036', 'L', '044', 'DICKW'), ('I611036', 'L', '905', 'DICKW'), ('I62001', 'G', '001', 'DICKI'), ('I511037', 'M', '031', 'DICKW'), ('K225017', 'L', '448', 'DICKG'), ('K225017', 'L', '448', 'DICKG')], 'Email(s) triggered successfully']}, {'EddieBauer': ['No new style initiations']}]"} 
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for style='eapple'
+2023-07-09 18:55:59.129556:----------------------------------------------------:
+Testing following emails ['lpee'] 
+Connected to the database successfully!
+Testing: lpee
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for LPEE
+LPEE Email not sent:, {'status': "Style Initiation Successful for [{'Dickies': ['No new style initiations']}, {'EddieBauer': ['No new style initiations']}]"} 
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for style='eapple'
+2023-07-09 18:59:33.009998:----------------------------------------------------:
+Testing following emails ['roa', 'droa', 'dsre', 'dsrt', 'srf', 'lpie', 'lpee'] 
+Connected to the database successfully!
+Testing: roa
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for ROA
+Connected to the database successfully!
+Disconnected from the database.
+Created all records for ROA
+ROA Email sent successfully, {'success': 'Mail is sent successfully'}
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for style='eapple'
+Testing: droa
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for DROA
+Connected to the database successfully!
+Disconnected from the database.
+Created all records for DROA
+DROA Email sent successfully, {'success': 'Droa Mail sent successfully'}
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for style='eapple'
+Testing: dsre
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for DSRE
+Connected to the database successfully!
+Disconnected from the database.
+Created all records for DSRE
+DSRE Email sent successfully, {'status': 'success'}
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for style='eapple'
+Testing: dsrt
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for DSRT
+Connected to the database successfully!
+Disconnected from the database.
+Created all records for DSRT
+Error While testing : Traceback (most recent call last):
+  File "C:\Work\testing\email_tester\env\lib\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Work\testing\email_tester\test_code\main_test.py", line 77, in main
+    test_status = test_func(URL, HEADERS, db)
+  File "C:\Work\testing\email_tester\test_code\dsrt_tester.py", line 21, in send_dsrt_email
+    logger.info(f"{TEST} Email sent successfully, {response.json()}")
+  File "C:\Work\testing\email_tester\env\lib\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for style='eapple'
+Testing: srf
+Deleted all records for SRF
+Connected to the database successfully!
+Disconnected from the database.
+Created all records for SRF
+Connected to the database successfully!
+Disconnected from the database.
+SRF Email sent successfully
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for style='eapple'
+Testing: lpie
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for LPIE
+LPIE Email sent successfully, {'status': "Style Initiation Successful for [{'Dickies': [[('I651035', 'L', '029', 'DICKI'), ('I315054', 'L', '100', 'DICKI'), ('I315054', 'L', '100', 'DICKI'), ('I315052', 'L', '100', 'DICKI'), ('I315052', 'L', '100', 'DICKI'), ('I611036', 'L', '044', 'DICKW'), ('I611036', 'L', '905', 'DICKW'), ('I62001', 'G', '001', 'DICKI'), ('I511037', 'M', '031', 'DICKW'), ('K225017', 'L', '448', 'DICKG'), ('K225017', 'L', '448', 'DICKG')], [('I651035', 'L', '029', 'DICKI'), ('I315054', 'L', '100', 'DICKI'), ('I315054', 'L', '100', 'DICKI'), ('I315052', 'L', '100', 'DICKI'), ('I315052', 'L', '100', 'DICKI'), ('I611036', 'L', '044', 'DICKW'), ('I611036', 'L', '905', 'DICKW'), ('I62001', 'G', '001', 'DICKI'), ('I511037', 'M', '031', 'DICKW'), ('K225017', 'L', '448', 'DICKG'), ('K225017', 'L', '448', 'DICKG')], [('I651035', 'L', '029', 'DICKI'), ('I315054', 'L', '100', 'DICKI'), ('I315054', 'L', '100', 'DICKI'), ('I315052', 'L', '100', 'DICKI'), ('I315052', 'L', '100', 'DICKI'), ('I611036', 'L', '044', 'DICKW'), ('I611036', 'L', '905', 'DICKW'), ('I62001', 'G', '001', 'DICKI'), ('I511037', 'M', '031', 'DICKW'), ('K225017', 'L', '448', 'DICKG'), ('K225017', 'L', '448', 'DICKG')], [('I651035', 'L', '029', 'DICKI'), ('I315054', 'L', '100', 'DICKI'), ('I315054', 'L', '100', 'DICKI'), ('I315052', 'L', '100', 'DICKI'), ('I315052', 'L', '100', 'DICKI'), ('I611036', 'L', '044', 'DICKW'), ('I611036', 'L', '905', 'DICKW'), ('I62001', 'G', '001', 'DICKI'), ('I511037', 'M', '031', 'DICKW'), ('K225017', 'L', '448', 'DICKG'), ('K225017', 'L', '448', 'DICKG')], [('I651035', 'L', '029', 'DICKI'), ('I315054', 'L', '100', 'DICKI'), ('I315054', 'L', '100', 'DICKI'), ('I315052', 'L', '100', 'DICKI'), ('I315052', 'L', '100', 'DICKI'), ('I611036', 'L', '044', 'DICKW'), ('I611036', 'L', '905', 'DICKW'), ('I62001', 'G', '001', 'DICKI'), ('I511037', 'M', '031', 'DICKW'), ('K225017', 'L', '448', 'DICKG'), ('K225017', 'L', '448', 'DICKG')], [('I651035', 'L', '029', 'DICKI'), ('I315054', 'L', '100', 'DICKI'), ('I315054', 'L', '100', 'DICKI'), ('I315052', 'L', '100', 'DICKI'), ('I315052', 'L', '100', 'DICKI'), ('I611036', 'L', '044', 'DICKW'), ('I611036', 'L', '905', 'DICKW'), ('I62001', 'G', '001', 'DICKI'), ('I511037', 'M', '031', 'DICKW'), ('K225017', 'L', '448', 'DICKG'), ('K225017', 'L', '448', 'DICKG')], [('I651035', 'L', '029', 'DICKI'), ('I315054', 'L', '100', 'DICKI'), ('I315054', 'L', '100', 'DICKI'), ('I315052', 'L', '100', 'DICKI'), ('I315052', 'L', '100', 'DICKI'), ('I611036', 'L', '044', 'DICKW'), ('I611036', 'L', '905', 'DICKW'), ('I62001', 'G', '001', 'DICKI'), ('I511037', 'M', '031', 'DICKW'), ('K225017', 'L', '448', 'DICKG'), ('K225017', 'L', '448', 'DICKG')], [('I651035', 'L', '029', 'DICKI'), ('I315054', 'L', '100', 'DICKI'), ('I315054', 'L', '100', 'DICKI'), ('I315052', 'L', '100', 'DICKI'), ('I315052', 'L', '100', 'DICKI'), ('I611036', 'L', '044', 'DICKW'), ('I611036', 'L', '905', 'DICKW'), ('I62001', 'G', '001', 'DICKI'), ('I511037', 'M', '031', 'DICKW'), ('K225017', 'L', '448', 'DICKG'), ('K225017', 'L', '448', 'DICKG')], [('I651035', 'L', '029', 'DICKI'), ('I315054', 'L', '100', 'DICKI'), ('I315054', 'L', '100', 'DICKI'), ('I315052', 'L', '100', 'DICKI'), ('I315052', 'L', '100', 'DICKI'), ('I611036', 'L', '044', 'DICKW'), ('I611036', 'L', '905', 'DICKW'), ('I62001', 'G', '001', 'DICKI'), ('I511037', 'M', '031', 'DICKW'), ('K225017', 'L', '448', 'DICKG'), ('K225017', 'L', '448', 'DICKG')], [('I651035', 'L', '029', 'DICKI'), ('I315054', 'L', '100', 'DICKI'), ('I315054', 'L', '100', 'DICKI'), ('I315052', 'L', '100', 'DICKI'), ('I315052', 'L', '100', 'DICKI'), ('I611036', 'L', '044', 'DICKW'), ('I611036', 'L', '905', 'DICKW'), ('I62001', 'G', '001', 'DICKI'), ('I511037', 'M', '031', 'DICKW'), ('K225017', 'L', '448', 'DICKG'), ('K225017', 'L', '448', 'DICKG')], [('I651035', 'L', '029', 'DICKI'), ('I315054', 'L', '100', 'DICKI'), ('I315054', 'L', '100', 'DICKI'), ('I315052', 'L', '100', 'DICKI'), ('I315052', 'L', '100', 'DICKI'), ('I611036', 'L', '044', 'DICKW'), ('I611036', 'L', '905', 'DICKW'), ('I62001', 'G', '001', 'DICKI'), ('I511037', 'M', '031', 'DICKW'), ('K225017', 'L', '448', 'DICKG'), ('K225017', 'L', '448', 'DICKG')], 'Email(s) triggered successfully']}, {'EddieBauer': ['No new style initiations']}]"}
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for style='eapple'
+Test Function name not defined
+Testing: lpee
+Error While testing : Traceback (most recent call last):
+  File "C:\Work\testing\email_tester\test_code\main_test.py", line 77, in main
+    test_status = test_func(URL, HEADERS, db)
+TypeError: empty_function() takes 0 positional arguments but 3 were given
+
+Connected to the database successfully!
+Disconnected from the database.
+Deleted all records for style='eapple'
