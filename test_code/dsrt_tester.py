@@ -28,7 +28,7 @@ def recreate_required_data(db):
     db.execute_query(DELETE_ALL_RECORDS)
     logger.info(f"Deleted all records for {TEST}")
     # Create the records for ROA
-    db.execute_query(SAVE_DATA_DAILY_STATUS_REPORT_SAVE.format(current_date, current_date, current_date))
+    db.execute_query(SAVE_DATA_DAILY_STATUS_REPORT_SAVE.format(current_date, current_date, current_date, current_date, current_date))
     logger.info(f"Created all records for {TEST}")
     # Update the records for ROA
 

@@ -12,6 +12,8 @@ from .dsrt_tester import send_dsrt_email
 from .dsre_tester import send_dsre_email
 from .lpee_tester import send_lpee_email
 from .lpie_tester import send_lpie_email
+from .prre_tester import send_prre_email
+from .ftpve_tester import send_ftpve_email
 
 import traceback
 from utils import logger
@@ -25,6 +27,9 @@ DSRT = 'dsrt'
 SRF = 'srf'
 LPIE = 'lpie'
 LPEE = 'lpee'
+PRRE = 'prre'
+FTPVE = 'ftpve'
+
 
 URL = 'http://localhost:8000/api/v1'
 HEADERS = {
@@ -41,7 +46,9 @@ test_cases = [
     DSRT, # Daily SRT Report Email
     SRF,  # Sample Request Form
     LPIE, # Line Plan Initiation Email
-    LPEE  # Line Plan Execution Error Email
+    LPEE,  # Line Plan Execution Error Email
+    PRRE,
+    FTPVE 
     ]
 
 # Read parameters to test based on user commands, else test all
@@ -68,8 +75,12 @@ def main():
                 test_func = send_dsre_email
             elif test_case == LPIE:
                 test_func = send_lpie_email
+            elif test_case == PRRE:
+                test_func = send_prre_email
             elif not (LPIE in test_cases) and LPEE == test_case:
                 test_func = send_lpee_email
+            elif test_case == FTPVE:
+                test_func = send_ftpve_email
             else:
                 logger.info("Test Function name not defined")
             try:
