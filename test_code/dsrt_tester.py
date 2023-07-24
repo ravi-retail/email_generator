@@ -18,7 +18,7 @@ def send_dsrt_email(url, headers, db):
     recreate_required_data(db)
     response = call_django_api(url, headers)
     if response.status_code == 200:
-        logger.info(f"{TEST} Email sent successfully, {response.json()}")
+        # logger.info(f"{TEST} Email sent successfully, {response.json()}")
         return True
     logger.info(f"{TEST} Email not sent, tried to delete and save data { response.json()} ")
     return False

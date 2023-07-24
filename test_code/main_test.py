@@ -85,6 +85,7 @@ def main():
                 logger.info("Test Function name not defined")
             try:
                 logger.info(f"Testing: {test_case}")
+                print(f"Testing: {test_case}")
                 test_status = test_func(URL, HEADERS, db)
                 print(f'Test Success :{test_case}' if test_status else f'Test Failed: {test_case}' )
                 if test_case == LPIE:

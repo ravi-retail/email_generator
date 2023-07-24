@@ -6,6 +6,8 @@ saved,request_status,Qty,reqno,send_to_vendor,sample_sent,req_exfactory,RU,size_
 updated_date,request_notes,design_cmt,pd_cmt,qa_cmt,brand_cmt,quantity_cmt,[user],updated_time,id)
 VALUES ('eapple', 'apple_100_dynamic_S24', 'apple_100_dynamic_S24_L_1','24','dynamic' ,'100','This is my favourite','Favourite fruit',
 'DICKI','L',1,0,6,1,0,'07/07/2023','07/06/2023',2,3,'S24','appleL','2023-07-07','07/07/2023',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+
+
 """
 
 SAVE_DATA_INTO_STATUS = """

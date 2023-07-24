@@ -33,4 +33,7 @@ def recreate_required_data(db):
 
 def call_django_api(url, headers):
     # API call for django -> MultiSampleRequest
-    return requests.get(url + URL, headers=headers, data=BODY)
+    # return requests.get(url + URL, headers=headers, data=BODY)
+    for i in range(10):
+        resp = requests.get(url + URL, headers=headers, data=BODY)
+    return resp

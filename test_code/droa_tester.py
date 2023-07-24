@@ -28,10 +28,12 @@ def recreate_required_data(db):
     db.execute_query(DELETE_ALL_RECORDS)
     logger.info(f"Deleted all records for {TEST}")
     # Create the records for DROA
-    db.execute_query(SAVE_DATA_DROA_STATUS.format(current_date, current_date, current_date, current_date))
+    db.execute_query(SAVE_DATA_DROA_STATUS.format(current_date, current_date, current_date, current_date, current_date))
     logger.info(f"Created all records for {TEST}")
     # Update the records for DROA
 
 def call_django_api(url, headers):
     # API call for django -> MultiSampleRequest
-    return requests.get(url + URL, headers=headers, data=BODY)
+    for i in range(10):
+        resp = requests.get(url + URL, headers=headers, data=BODY)
+    return resp
